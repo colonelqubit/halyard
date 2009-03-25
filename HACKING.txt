@@ -7,6 +7,7 @@ Table of Contents
   * Checking Halyard Out of Git
   * Downloading Halyard
   * Building Win32 Halyard
+  * Halyard/test
   * Rake
   * Building Mac OS X Halyard
   * Source Documentation
@@ -182,6 +183,40 @@ Building Win32 Halyard
   selected, debug or release. You'll need to run each of them before
   each check in.
 
+Halyard/test
+------------
+
+  Halyard/test is an interactive, high-level test script written in
+  Halyard. In order to run Halyard/test, you will need some
+  third-party software.
+
+  Required for Halyard/test:
+    * The QuickTime Player - http://www.apple.com/quicktime/download/
+
+  Optional, but required for certain cards:
+    * Xiph QuickTime Components - http://xiph.org/quicktime/
+
+    * VP3 Codec - Being phased out of Halyard/test (no download available)
+
+    * GPG Verifier - In order to test certain components of the
+      Halyard/test automatic update functionality, you'll need a copy
+      of gpgv.exe, a verifier of GPG signatures. Download the latest
+      Win32 GPG package, install it, and then look in the install
+      directory (usually C:\Program Files\GNU\GnuPG and copy the
+      gpgv.exe program from there into the halyard/test/binaries
+      directory.
+
+   * Quake2 Demo Levels - In order to try out the embedded Quake
+     functionality in Halyard/test, you'll need to download the Quake
+     2 demo from id Software. Once you have downloaded it, extract the
+     files, but there is no need to install Quake 2. Just look in the
+     extracted directory for the directory Install\Data\baseq2 and
+     copy that directory (baseq2) into the halyard/test directory.
+     http://www.idsoftware.com/games/quake/quake2/index.php?game_section=demo
+
+  For more information, see the wiki page for Halyard/test:
+  http://iml.dartmouth.edu/halyard/wiki/index.php/Halyard_Test
+
 Rake
 ----
 
@@ -223,7 +258,8 @@ What Lives Where
   Common/Scripts/        - Test scripts
   Common/fonttools/      - Font-related programs (some are Linux-only)
 
-  test/                  - Our official test and example project
+  test/                  - The official test and example project, usually
+                           referred to as "Halyard/test"
 
   runtime/               - Runtime support files, including binaries
   runtime/collects/      - Scheme language runtime support
@@ -353,7 +389,7 @@ Testing Your Changes
 
   We have two test suites: "TestAll", which is a fully-automated,
   low-level test suite (as advocated by the eXtreme Programming
-  folks), and "halyard/test", an interactive, high-level test script
+  folks), and "Halyard/test", an interactive, high-level test script
   written in Halyard.
 
   * Updating "TestAll"  
@@ -370,11 +406,11 @@ Testing Your Changes
   Hook your test cases into TestAll.cpp.  You can figure out how to
   do this by looking at the source.
 
-  * Updating halyard/test
+  * Updating Halyard/test
 
   Unfortunately, "TestAll" still can't test lots of things:
   primitives, graphics, platform-specific code, etc.  In these cases,
-  add one or more new cards to halyard/test and hook them into the
+  add one or more new cards to Halyard/test and hook them into the
   main menu.  In order to test changes you've made to the Runtime
   directory, make those changes in $HALYARD_DIR/test
 
@@ -399,7 +435,7 @@ Sending patches and committing changes
      just 'rake test_debug', which will only build and test the Debug
      version of the test suite.
 
-  3) Build and run the engine, and open the halyard/test script.  Jump
+  3) Build and run the engine, and open the Halyard/test script.  Jump
      to any relevant test cards, and preferably all of the unit test
      cards.
 
@@ -453,7 +489,7 @@ Building and releasing an engine
      them automatically.
 
   5) Run the debug and release versions of the application, and look at any
-     relevant halyard/test cards.
+     relevant Halyard/test cards.
 
   6) Update $HALYARD_DIR/Release-Notes.txt.  You should have a line
      including the version number and date, copy any notes about API
