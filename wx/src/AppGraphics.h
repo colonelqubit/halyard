@@ -28,7 +28,7 @@
 // We get our graphics from XPM files on non-Windows systems.
 #if CONFIG_USE_XPMS
 
-typedef char *xpm_graphic_t[];
+typedef const char *xpm_graphic_t[];
 
 extern xpm_graphic_t ic_application_xpm;
 extern xpm_graphic_t ic_card_xpm;

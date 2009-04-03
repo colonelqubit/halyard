@@ -76,8 +76,8 @@ std::string Halyard::MakeQuotedString(const std::string& inString) {
 #if BUILD_TEST_CASES
 
 struct QuotedStringTestData {
-    char *input;
-    char *output;
+    const char *input;
+    const char *output;
 };
 
 QuotedStringTestData quoted_string_tests[] = {
