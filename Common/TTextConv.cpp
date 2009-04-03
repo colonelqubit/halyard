@@ -344,7 +344,7 @@ BEGIN_TEST_CASE(TestMultibyteConversion, TestCase) {
 //      http://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-test.txt
 
 typedef struct {
-    char *utf8;
+    const char *utf8;
     wchar_t wcs[16];
 } utf8_and_wcs;
 
