@@ -1,5 +1,5 @@
 /* XPM */
-static char *tb_wrap_xpm[] = {
+static const char *tb_wrap_xpm[] = {
 /* width height ncolors chars_per_pixel */
 "16 16 3 1",
 /* colors */

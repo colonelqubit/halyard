@@ -1,5 +1,5 @@
 /* XPM */
-static char *tb_sizedec_xpm[] = {
+static const char *tb_sizedec_xpm[] = {
 /* width height ncolors chars_per_pixel */
 "16 16 4 1",
 /* colors */

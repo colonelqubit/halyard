@@ -1,5 +1,5 @@
 /* XPM */
-static char *tab_right_empty_xpm[] = {
+static const char *tab_right_empty_xpm[] = {
 /* width height ncolors chars_per_pixel */
 "9 9 3 1",
 /* colors */

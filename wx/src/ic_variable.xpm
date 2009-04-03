@@ -1,5 +1,5 @@
 /* XPM */
-static char *ic_variable_xpm[] = {
+static const char *ic_variable_xpm[] = {
 /* width height ncolors chars_per_pixel */
 "16 16 3 1",
 /* colors */

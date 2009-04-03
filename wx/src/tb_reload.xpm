@@ -1,5 +1,5 @@
 /* XPM */
-static char *tb_reload_xpm[] = {
+static const char *tb_reload_xpm[] = {
 /* width height ncolors chars_per_pixel */
 "16 16 5 1",
 /* colors */

@@ -1,5 +1,5 @@
 /* XPM */
-static char *ic_folder_closed_xpm[] = {
+static const char *ic_folder_closed_xpm[] = {
 /* width height ncolors chars_per_pixel */
 "16 16 5 1",
 /* colors */
