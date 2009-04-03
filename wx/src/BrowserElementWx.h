@@ -27,6 +27,11 @@
 
 
 //////////
+/// A custom version of the WxHtmlWindow
+///
+class CustomWxHtmlWindow;
+
+//////////
 /// A simple browser based on the wxWindows help viewer.
 ///
 class BrowserElementWx : public BrowserElement {

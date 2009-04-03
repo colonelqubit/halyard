@@ -171,10 +171,8 @@ namespace FileSystem {
 		void CreateWithMimeType(const std::string &inMimeType);
 
 		//////////
-		/// Compare two paths for equality.  This is a dumb test--it doesn't
-		/// know anything about simplifying paths, and it doesn't look at
-		/// the disk.  It just does a memberwise comparison.  It isn't
-		/// good for much besides the test suites, actually.
+		/// Declare the operator== function a friend so that it may
+		/// access private variables.
 		///
 		friend bool operator==(const Path& inLeft, const Path& inRight);
 
@@ -369,6 +367,18 @@ namespace FileSystem {
 	///                       path refers to a file
 	///
 	void ExistenceCheck(const Path &inPath, const bool &isDir);
+
+	//////////
+	/// Ubuntu: This function must be declared a friend above, but must also
+	/// be declared in the main FileSystem scope here.
+	///
+	/// Compare two paths for equality.  This is a dumb test--it doesn't
+	/// know anything about simplifying paths, and it doesn't look at
+	/// the disk.  It just does a memberwise comparison.  It isn't
+	/// good for much besides the test suites, actually.
+	///
+	bool operator==(const Path& inLeft, const Path& inRight);
+
 }
 
 #endif // FileSystem_H
