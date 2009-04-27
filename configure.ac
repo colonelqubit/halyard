@@ -42,6 +42,11 @@ AC_PROG_CC
 # Checks for Libraries
 #==========================================================================
 
+# Check for math (libm) and dynamic linking loader (libdl).
+AC_CHECK_LIB(m, sin,, AC_MSG_ERROR([libm is required to build Halyard.]))
+AC_CHECK_LIB(dl, dlopen,,
+             AC_MSG_ERROR([libdl is required to build Halyard.]))
+
 # Check for various libraries.
 PKG_CHECK_MODULES(FREETYPE, [freetype2 >= 2.3.4])
 PKG_CHECK_MODULES(XML2, [libxml-2.0 >= 2.4.30])
@@ -54,7 +59,7 @@ LIBRARY_MISSING_IF([test x$success != xyes], [SQLite])
 AX_BOOST_BASE(1.31.0)
 AX_BOOST_FILESYSTEM
 AX_BOOST_UNIT_TEST_FRAMEWORK
-AX_BOOST_TEST_EXEC_MONITOR
+#AX_BOOST_TEST_EXEC_MONITOR
 
 # TODO - Look for portaudio and tremor.
 AX_LIB_MZSCHEME(3m, 371)
@@ -62,6 +67,12 @@ LIBRARY_MISSING_IF([test x"$HAVE_MZSCHEME" != xyes], [mzscheme])
 
 # Check for wxWidgets.
 AM_PATH_WXCONFIG(2.8.10, [HAVE_WXWIDGETS=yes], [HAVE_WXWIDGETS=no], [stc])
+
+# Ubuntu: Okay, it looks like this test will PASS if even if we don't have
+# static libs, but the WX_LIBS variable will not be properly set for
+# dynamic linking. Trying to fix...
+#AM_PATH_WXCONFIG(2.8.7, [HAVE_WXWIDGETS=yes], [HAVE_WXWIDGETS=no], [stc])
+AM_PATH_WXCONFIG(2.8.7, [HAVE_WXWIDGETS=yes], [HAVE_WXWIDGETS=no])
 LIBRARY_MISSING_IF([test x"$HAVE_WXWIDGETS" != xyes], [wxWidgets])
 AM_PATH_WXRC([HAVE_WXRC=yes], [HAVE_WXRC=no])
 LIBRARY_MISSING_IF([test x"$HAVE_WXRC" != xyes], [wxrc])
@@ -88,6 +99,7 @@ LIBRARY_MISSING_IF([test x"$HAVE_LIBLOG4CPLUS" != xyes], [log4cplus])
 # Checks for Header Files
 #==========================================================================
 
+# This is Mac-specific. Should it be wrapped for only that platform?
 AC_CHECK_HEADERS([Carbon/Carbon.h])
 
 
@@ -140,7 +152,10 @@ AC_CHECK_FUNCS([strstr])
 
 # Turn on debugging, and fail if we encounter any warnings.
 CFLAGS="$CFLAGS -g -Wall -Werror"
+# Ubuntu: Trying to shove some includes in here to make the wxwidgets
+# linking work properly.
 CXXFLAGS="$CXXFLAGS -g -Wall -Werror"
+#CXXFLAGS="$CXXFLAGS -I/usr/lib/wx/include/gtk2-unicode-release-2.8 -I/usr/include/wx-2.8 -g -Wall -Werror"
 
 
 #==========================================================================

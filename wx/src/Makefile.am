@@ -102,7 +102,6 @@ halyard_SOURCES = \
 	Overlay.cpp Overlay.h \
 	ProgramTree.cpp ProgramTree.h \
 	resources.cpp \
-	ScriptEditor.cpp ScriptEditor.h \
 	Stage.cpp Stage.h \
 	StageAccessible.cpp StageAccessible.h \
 	StageFrame.cpp StageFrame.h \
@@ -127,6 +126,11 @@ halyard_LDADD = \
 	$(CURL_LIBS) \
 	$(CAIRO_LIBS) \
 	$(WX_LIBS)
+
+# Ubuntu: Disabling the Script Editor, as we're having problems getting it
+# to link without error. 
+#ScriptEditor.cpp ScriptEditor.h
+
 
 # Temporarily disabled because of dependencies on wxWidgets 2.6 APIs
 # missing in 2.8.

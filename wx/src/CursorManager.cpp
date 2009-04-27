@@ -55,10 +55,16 @@ CursorManager::CursorManager()
 	// Old 5L stock cursors.
 	// PORTABILITY - We might want to turn these into PNGs eventually,
 	// or use whatever portable resource system wxWindows decides on.
-	RegisterCursor("left", wxCursor(wxT("IDC_LEFT_CURSOR")));
-	RegisterCursor("right", wxCursor(wxT("IDC_RIGHT_CURSOR")));
-    RegisterCursor("turnleft", wxCursor(wxT("IDC_TURN_LEFT_CURSOR")));
-    RegisterCursor("turnright", wxCursor(wxT("IDC_TURN_RIGHT_CURSOR")));
+	// Ubuntu: I can't figure out how these cursors were properly
+	// registered in wx2.6 or wx2.8.
+	//RegisterCursor("left", wxCursor(wxT("IDC_LEFT_CURSOR"),
+	//								wxBITMAP_TYPE_XBM));
+	//RegisterCursor("right", wxCursor(wxT("IDC_RIGHT_CURSOR"),
+	//								 wxBITMAP_TYPE_XBM));
+    //RegisterCursor("turnleft", wxCursor(wxT("IDC_TURN_LEFT_CURSOR"),
+	//									wxBITMAP_TYPE_XBM));
+    //RegisterCursor("turnright", wxCursor(wxT("IDC_TURN_RIGHT_CURSOR"),
+	//									 wxBITMAP_TYPE_XBM));
 }
 
 CursorManager::~CursorManager()

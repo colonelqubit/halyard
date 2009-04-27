@@ -99,7 +99,10 @@ AC_DEFUN([AX_LIB_MZSCHEME],
         if test $ac_mzscheme_want_precise_gc = 1; then
             ac_mzscheme_gc_defs="-DMZ_PRECISE_GC"
         fi
-        ac_mzscheme_cppflags="$ac_mzscheme_gc_defs -I$ac_mzscheme_path/include"
+
+        # Ubuntu: This needs to be PATH/include/plt, not PATH/include.
+        # We'll need to put this elsewhere to be portable.
+        ac_mzscheme_cppflags="$ac_mzscheme_gc_defs -I$ac_mzscheme_path/include/plt"
 
         if test -d "$ac_mzscheme_path/lib/PLT_MzScheme.framework"; then
             ac_mzscheme_libdir="-F$ac_mzscheme_path/lib"
@@ -109,8 +112,9 @@ AC_DEFUN([AX_LIB_MZSCHEME],
             ac_mzscheme_libdir="-F$ac_mzscheme_path/Library/Frameworks"
             ac_mzscheme_libs="-framework PLT_MzScheme"
         else
+            # Ubuntu: I think the so lib path is correct without change.
             ac_mzscheme_libdir="-L$ac_mzscheme_path/lib"
-            if test $ac_mzscheme_want_precise_gc = 1; then
+            if test $ac_mzscheme_want_precise_gc -eq 0; then
                 ac_mzscheme_libs="-lmzscheme -lmzgc"
             else
                 ac_mzscheme_libs="-lmzscheme3m"

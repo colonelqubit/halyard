@@ -169,7 +169,10 @@ AC_DEFUN([AM_PATH_WXCONFIG],
     if test -n "$wx_ver_ok"; then
 
       AC_MSG_RESULT(yes (version $WX_VERSION))
-      WX_LIBS=`$WX_CONFIG_WITH_ARGS --libs`
+      dnl Ubuntu: Hacking this line to work. Must be cleaned up before we
+      dnl make a patch for the engine.
+      dnl WX_LIBS=`$WX_CONFIG_WITH_ARGS --libs`
+      WX_LIBS=`wx-config --libs`
 
       dnl is this even still appropriate?  --static is a real option now
       dnl and WX_CONFIG_WITH_ARGS is likely to contain it if that is
