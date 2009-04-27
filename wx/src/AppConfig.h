@@ -66,12 +66,13 @@
 #else // !defined __WXMSW__
 #   ifdef HAVE_CARBON_CARBON_H
 #	    define CONFIG_HAVE_QUICKTIME     1
+#	    define CONFIG_HAVE_SCRIPTEDITOR  1
 #   else // !HAVE_CARBON_CARBON_H
 #	    define CONFIG_HAVE_QUICKTIME     0
+#	    define CONFIG_HAVE_SCRIPTEDITOR  0
 #   endif // !HAVE_CARBON_CARBON_H
 #	define CONFIG_HAVE_ACTIVEX           0
 #	define CONFIG_HAVE_AUDIOSTREAMS      0
-#	define CONFIG_HAVE_SCRIPTEDITOR      1
 #	define CONFIG_LOCATION_BOX_IS_COMBO  1
 #	define CONFIG_USE_XPMS               1
 #	define CONFIG_ENABLE_FULL_SCREEN     0

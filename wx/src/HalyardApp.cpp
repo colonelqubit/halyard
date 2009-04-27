@@ -582,7 +582,8 @@ int HalyardApp::OnExit() {
 // please add it to the conditional.
 #if wxCHECK_VERSION(2,8,0) && \
     ((defined __WXMSW__) || \
-     (defined __WXMAC_CARBON__) && !wxMAC_USE_RUN_APP_EVENT_LOOP)
+     ((defined __WXMAC_CARBON__) && !wxMAC_USE_RUN_APP_EVENT_LOOP) || \
+     APP_PLATFORM_OTHER)
 
 class HalyardEventLoop : public wxEventLoop {
 public:
