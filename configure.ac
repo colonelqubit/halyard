@@ -7,18 +7,18 @@ AM_INIT_AUTOMAKE(halyard, 0.0)
 #AC_DEFINE(HAVE_EYE_OF_GNOME)
 
 # Libraries we need to build Common, and the versions available to us:
-#              In tree  MacPorts  Ubuntu 7.10
-#   boost      1.31.0   1.34.1    "
-#   freetype2  2.3.4    2.3.5     "
-#   libxml2    2.4.30   2.6.31    2.6.30
-#   plt        360      371       360 (do we have dev headers here?)
-#   sqlite     3.0.3    3.5.7     3.4.2
+#              In tree  MacPorts  Ubuntu 9.04
+#   boost      1.31.0   1.34.1    1.34.1-15ubuntu3
+#   freetype2  2.3.4    2.3.5     2.3.9-4build1
+#   libxml2    2.4.30   2.6.31    2.6.32.dfsg-5ubuntu4
+#   plt        360      371       372
+#   sqlite     3.0.3    3.5.7     3.6.10-1
 #
 # Libraries we need to build the engine:
-#   curl       7.19.4   7.19.3
-#   tremor     1.0.2
-#   portaudio  18       19        19
-#   wxWidgets  2.6.1p1  2.8.7     2.8.4
+#   curl       7.19.4   7.19.3    7.18.2-8ubuntu4
+#   tremor     1.0.2              ? (what requires tremor?)
+#   portaudio  18       19        19+svn20071207-0ubuntu
+#   wxWidgets  2.6.1p1  2.8.7     2.8.9.1-0ubuntu6
 #
 # On the Mac, run:
 #
@@ -27,7 +27,10 @@ AM_INIT_AUTOMAKE(halyard, 0.0)
 #
 # If you get errors on Leopard (especially with boost or wxWidgets), Google
 # for the error messages.
-
+#
+# On an Ubuntu system, follow the instructions on the wiki here:
+#   http://iml.dartmouth.edu/wiki/index.php/Compiling_Halyard_on_Ubuntu
+#
 
 #==========================================================================
 # Checks for Programs
