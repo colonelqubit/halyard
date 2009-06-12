@@ -42,6 +42,10 @@ AC_PROG_CC
 # Checks for Libraries
 #==========================================================================
 
+# Check for math (libm) and dynamic linking loader (libdl).
+AC_CHECK_LIB(m, sin)
+AC_CHECK_LIB(dl, dlopen)
+
 # Check for various libraries.
 PKG_CHECK_MODULES(FREETYPE, [freetype2 >= 2.3.4])
 PKG_CHECK_MODULES(XML2, [libxml-2.0 >= 2.4.30])
