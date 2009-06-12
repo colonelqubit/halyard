@@ -1,11 +1,10 @@
 /* XPM */
-static char *ic_function_xpm[] = {
-/* width height ncolors chars_per_pixel */
+static const char *ic_function_xpm[] = {
+/* columns rows colors chars-per-pixel */
 "16 16 4 1",
-/* colors */
-"  c #000000",
+"  c black",
 ". c #008080",
-"X c #FFFFFF",
+"X c gray100",
 "o c None",
 /* pixels */
 "oooooooooooooooo",

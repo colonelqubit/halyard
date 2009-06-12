@@ -1,27 +1,26 @@
 /* XPM */
-static char *ic_card_xpm[] = {
-/* width height ncolors chars_per_pixel */
+static const char *ic_card_xpm[] = {
+/* columns rows colors chars-per-pixel */
 "16 16 5 1",
-/* colors */
-"  c #000000",
-". c #00FFFF",
-"X c #FFFFFF",
-"o c #008000",
+"  c black",
+". c #008000",
+"X c cyan",
+"o c gray100",
 "O c None",
 /* pixels */
 "OOOOOOOOOOOOOOOO",
 "OOOOOOOOOOOOOOOO",
 "                ",
-" XXXXXXXXXXXXXX ",
-" X XX    X XX X ",
-" X  X  X X    X ",
-" XXXXXXXXXXXXXX ",
-" X         XXXX ",
-" X o...... XXXX ",
-" X ooo.... XXXX ",
-" X ooooooo XXXX ",
-" X         XXXX ",
-" XXXXXXXXXXXXXX ",
+" oooooooooooooo ",
+" o oo    o oo o ",
+" o  o  o o    o ",
+" oooooooooooooo ",
+" o         oooo ",
+" o .XXXXXX oooo ",
+" o ...XXXX oooo ",
+" o ....... oooo ",
+" o         oooo ",
+" oooooooooooooo ",
 "                ",
 "OOOOOOOOOOOOOOOO",
 "OOOOOOOOOOOOOOOO"

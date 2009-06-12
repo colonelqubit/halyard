@@ -1,11 +1,9 @@
 /* XPM */
-static char *tab_left_empty_xpm[] = {
-/* width height ncolors chars_per_pixel */
-"9 9 3 1",
-/* colors */
-"  c #000000",
-". c #FFFFFF",
-"X c None",
+static const char *tab_left_empty_xpm[] = {
+/* columns rows colors chars-per-pixel */
+"9 9 2 1",
+"  c black",
+". c gray100",
 /* pixels */
 "...... ..",
 ".....  ..",

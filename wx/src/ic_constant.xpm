@@ -1,26 +1,24 @@
 /* XPM */
-static char *ic_constant_xpm[] = {
-/* width height ncolors chars_per_pixel */
-"16 16 3 1",
-/* colors */
+static const char *ic_constant_xpm[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 2 1",
 "  c #008080",
-". c #FFFFFF",
-"X c None",
+". c None",
 /* pixels */
-"XXXXXXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXX",
-"XXXXXXX  XXXXXXX",
-"XXXXX      XXXXX",
-"XXXX  X  X  XXXX",
-"XXXX  X  XXXXXXX",
-"XXXXX      XXXXX",
-"XXXXXXX  X  XXXX",
-"XXXX  X  X  XXXX",
-"XXXXX      XXXXX",
-"XXXXXXX  XXXXXXX",
-"XXXXXXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXX"
+"................",
+"................",
+"................",
+"................",
+".......  .......",
+".....      .....",
+"....  .  .  ....",
+"....  .  .......",
+".....      .....",
+".......  .  ....",
+"....  .  .  ....",
+".....      .....",
+".......  .......",
+"................",
+"................",
+"................"
 };

@@ -1,26 +1,25 @@
 /* XPM */
-static char *ic_document_xpm[] = {
-/* width height ncolors chars_per_pixel */
+static const char *ic_document_xpm[] = {
+/* columns rows colors chars-per-pixel */
 "16 16 3 1",
-/* colors */
-"  c #000000",
-". c #FFFFFF",
+"  c black",
+". c gray100",
 "X c None",
 /* pixels */
-"XX         XXXXX",
-"XX .......  XXXX",
-"XX ....... . XXX",
-"XX .......    XX",
-"XX .......... XX",
-"XX .......... XX",
-"XX .......... XX",
-"XX .......... XX",
-"XX .......... XX",
-"XX .......... XX",
-"XX .......... XX",
-"XX .......... XX",
-"XX .......... XX",
-"XX .......... XX",
-"XX .......... XX",
-"XX            XX"
+"XXXXXXXXXXXXXXXX",
+"XXX.......      ",
+"XXX....... .    ",
+"XXX.......      ",
+"XXX..........   ",
+"XXX..........   ",
+"XXX..........   ",
+"XXX..........   ",
+"XXX..........   ",
+"XXX..........   ",
+"XXX..........   ",
+"XXX..........   ",
+"XXX..........   ",
+"XXX..........   ",
+"XXX..........   ",
+"XXXXXXXXXXXXXXXX"
 };

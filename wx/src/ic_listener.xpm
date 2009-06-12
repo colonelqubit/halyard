@@ -1,27 +1,25 @@
 /* XPM */
-static char *ic_listener_xpm[] = {
-/* width height ncolors chars_per_pixel */
-"16 16 4 1",
-/* colors */
-"  c #000000",
-". c #FFFFFF",
-"X c #0000FF",
-"o c None",
+static const char *ic_listener_xpm[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 3 1",
+"  c black",
+". c blue",
+"X c gray100",
 /* pixels */
 "                ",
+" .............. ",
+"                ",
+" XXXXXXXXXXXXXX ",
+" X  X X XXXXXXX ",
+" X X    XXXXXXX ",
+" XXXXXXXXXXXXXX ",
+" X.X..XXXXXXXXX ",
+" X.....XXXXXXXX ",
 " XXXXXXXXXXXXXX ",
 "                ",
-" .............. ",
-" .  . . ....... ",
-" . .    ....... ",
-" .............. ",
-" .X.XX......... ",
-" .XXXXX........ ",
-" .............. ",
-"                ",
-" .............. ",
-" .  . . ....... ",
-" . .    ....... ",
-" .............. ",
+" XXXXXXXXXXXXXX ",
+" X  X X XXXXXXX ",
+" X X    XXXXXXX ",
+" XXXXXXXXXXXXXX ",
 "                "
 };

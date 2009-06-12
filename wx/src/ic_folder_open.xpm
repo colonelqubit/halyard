@@ -1,28 +1,27 @@
 /* XPM */
-static char *ic_folder_open_xpm[] = {
-/* width height ncolors chars_per_pixel */
+static const char *ic_folder_open_xpm[] = {
+/* columns rows colors chars-per-pixel */
 "16 16 5 1",
-/* colors */
-"  c #000000",
-". c #C0C0C0",
-"X c #808080",
-"o c #FFFFFF",
+"  c black",
+". c #808080",
+"X c #C0C0C0",
+"o c gray100",
 "O c None",
 /* pixels */
 "OOOOOOOOOOOOOOOO",
-"OOOXXXXOOOOOOOOO",
-"OOX....XOOOOOOOO",
-"OX......XXXXXXXO",
-"OX............X ",
-"OX............X ",
-"XXXXXXXXXXXX..X ",
-"XoooooooooooX.X ",
-"Xo..........X.X ",
-"OXo..........XX ",
-"OXo..........XX ",
-"OOXo..........X ",
-"OOXXXXXXXXXXXXX ",
-"OOO             ",
+"OOO....OOOOOOOOO",
+"OO.XXXX.OOOOOOOO",
+"O.XXXXXX.......O",
+"O.XXXXXXXXXXXX. ",
+"O.XXXXXXXXXXXX. ",
+"............XX. ",
+".ooooooooooo.X. ",
+".oXXXXXXXXXX.X. ",
+"O.oXXXXXXXXXX.. ",
+"O.oXXXXXXXXXX.. ",
+"OO.oXXXXXXXXXX. ",
+"OO............. ",
+"OOOOOOOOOOOOOOOO",
 "OOOOOOOOOOOOOOOO",
 "OOOOOOOOOOOOOOOO"
 };

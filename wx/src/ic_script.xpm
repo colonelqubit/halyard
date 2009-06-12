@@ -1,29 +1,28 @@
 /* XPM */
-static char *ic_script_xpm[] = {
-/* width height ncolors chars_per_pixel */
+static const char *ic_script_xpm[] = {
+/* columns rows colors chars-per-pixel */
 "16 16 6 1",
-/* colors */
-"  c #000000",
-". c #008080",
-"X c #808080",
-"o c #FFFFFF",
-"O c #0000FF",
+"  c black",
+". c blue",
+"X c #008080",
+"o c #808080",
+"O c gray100",
 "+ c None",
 /* pixels */
-"++         +++++",
-"++ ooooooo  ++++",
-"++ ooooooo o +++",
-"++ oOO...o    ++",
-"++ oooooooooo ++",
-"++ oo...XXXoo ++",
-"++ oooooooooo ++",
-"++ ooOO...ooo ++",
-"++ oooooooooo ++",
-"++ ooo....ooo ++",
-"++ oooooooooo ++",
-"++ oo...XXooo ++",
-"++ oooooooooo ++",
-"++ oooooooooo ++",
-"++            ++",
+"++++++++++++++++",
+"+++OOOOOOO      ",
+"+++OOOOOOO O    ",
+"+++O..XXXO      ",
+"+++OOOOOOOOOO   ",
+"+++OOXXXoooOO   ",
+"+++OOOOOOOOOO   ",
+"+++OO..XXXOOO   ",
+"+++OOOOOOOOOO   ",
+"+++OOOXXXXOOO   ",
+"+++OOOOOOOOOO   ",
+"+++OOXXXooOOO   ",
+"+++OOOOOOOOOO   ",
+"+++OOOOOOOOOO   ",
+"++++++++++++++++",
 "++++++++++++++++"
 };

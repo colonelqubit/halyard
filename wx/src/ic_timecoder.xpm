@@ -1,28 +1,26 @@
 /* XPM */
-static char *ic_timecoder_xpm[] = {
-/* width height ncolors chars_per_pixel */
-"16 16 5 1",
-/* colors */
-"  c #000000",
-". c #C0C0C0",
-"X c #FF0000",
-"o c #0000FF",
-"O c None",
+static const char *ic_timecoder_xpm[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 4 1",
+"  c black",
+". c red",
+"X c blue",
+"o c #C0C0C0",
 /* pixels */
 "                ",
-" oooooooooooooo ",
-" oooooooooooooo ",
-" ooooXXoooooXoo ",
-" oooXXXooooXooo ",
-" oooXoXXXXXXooo ",
-" ooXXoXXooXXooo ",
-" ooXooooooooooo ",
-" oooooooooooooo ",
+" XXXXXXXXXXXXXX ",
+" XXXXXXXXXXXXXX ",
+" XXXX..XXXXX.XX ",
+" XXX...XXXX.XXX ",
+" XXX.X......XXX ",
+" XX..X..XX..XXX ",
+" XX.XXXXXXXXXXX ",
+" XXXXXXXXXXXXXX ",
 "                ",
-" .............. ",
-" ...   . .   .. ",
-" ... . ... . .. ",
-" ...   . .   .. ",
-" .............. ",
+" oooooooooooooo ",
+" ooo   o o   oo ",
+" ooo o ooo o oo ",
+" ooo   o o   oo ",
+" oooooooooooooo ",
 "                "
 };
