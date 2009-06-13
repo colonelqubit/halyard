@@ -20,6 +20,11 @@
 //
 // @END_LICENSE
 
+#define IDC_LEFT_CURSOR "left_cur.cur"
+#define IDC_TURN_RIGHT_CURSOR "backup_c.cur"
+#define IDC_TURN_LEFT_CURSOR "up_curso.cur"
+#define IDC_RIGHT_CURSOR "right_cu.cur"
+
 #include "AppHeaders.h"
 #include <wx/image.h>
 
@@ -54,10 +59,10 @@ CursorManager::CursorManager() {
     // Old 5L stock cursors.
     // PORTABILITY - We might want to turn these into PNGs eventually,
     // or use whatever portable resource system wxWindows decides on.
-    RegisterCursor("left", wxCursor(wxT("IDC_LEFT_CURSOR")));
-    RegisterCursor("right", wxCursor(wxT("IDC_RIGHT_CURSOR")));
-    RegisterCursor("turnleft", wxCursor(wxT("IDC_TURN_LEFT_CURSOR")));
-    RegisterCursor("turnright", wxCursor(wxT("IDC_TURN_RIGHT_CURSOR")));
+    //RegisterCursor("left", wxCursor(wxImage(wxString(IDC_LEFT_CURSOR))));
+    //RegisterCursor("right", wxCursor(IDC_RIGHT_CURSOR));
+    //RegisterCursor("turnleft", wxCursor(IDC_TURN_LEFT_CURSOR));
+    //RegisterCursor("turnright", wxCursor(IDC_TURN_RIGHT_CURSOR));
 }
 
 CursorManager::~CursorManager() {
