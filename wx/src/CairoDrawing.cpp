@@ -142,6 +142,22 @@ CairoSurfacePtr::FromDC(wxDC &inDC) {
     return CairoSurfacePtr(cairo_win32_surface_create((HDC) inDC.GetHDC()));
 }
 
+#elif defined(__WXGTK__)
+
+CairoSurfacePtr
+CairoSurfacePtr::FromDC(wxDC &inDC) {
+    //wxGraphicsContext *wx_context(inDC.GetGraphicsContext());
+    //CGContextRef context((CGContextRef) wx_context->GetNativeContext());
+    //if (!context)
+    //    THROW("Cannot retrieve native graphics context for DC");
+    wxSize size(inDC.GetSize());
+    cairo_surface_t *surface =
+        cairo_image_surface_create(CAIRO_FORMAT_ARGB32, size.GetWidth(),
+                                   size.GetHeight());
+    
+    return CairoSurfacePtr(surface);
+}
+
 #else
 #error "No implementation of CairoSurfacePtr::FromDC for this platform"
 #endif
